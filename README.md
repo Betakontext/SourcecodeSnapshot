@@ -1,4 +1,6 @@
-# sourcecode-snapshot
+# SourcecodeSnapshot
+
+![Python](https://img.shields.io/badge/python-3.8%2B-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Latest Release](https://img.shields.io/github/v/release/Betakontext/SourcecodeSnapshot?label=latest%20release)
 
 Lightweight utility to produce a code-only Markdown snapshot of a repository.
 
@@ -33,11 +35,26 @@ Explicit filenames:
 Default excluded directories:
 - `.venv`, `venv`, `__pycache__`, `.git`, `.pytest_cache`, `.mypy_cache`, `models`, `outputs`, `recordings`, `node_modules`, `dist`, `build`
 
-## Usage
+## Installation
 
-Place `sourcecode_snapshot.py` in the project root (or install it to your PATH) and run:
+No installation required. Copy `sourcecode_snapshot.py` to your project root or clone this repository:
 
 ```bash
+git clone https://github.com/Betakontext/SourcecodeSnapshot.git
+cd SourcecodeSnapshot
+
+(Optional) Make executable:
+BASH
+Kopieren
+
+chmod +x sourcecode_snapshot.py
+
+Usage
+
+Place sourcecode_snapshot.py in the project root (or install it to your PATH) and run:
+BASH
+Kopieren
+
 python3 sourcecode_snapshot.py
 
 Common options:
@@ -72,28 +89,23 @@ Output
 
     If --zip is provided, a ZIP archive is created that contains the Markdown file and the included source files preserving relative paths.
 
-Configuration
+CI integration (optional)
 
-Edit the script constants or use CLI flags to adapt behavior:
+You can run the script in CI to produce artifacts or commit snapshots to a branch. Example GitHub Actions badge (replace with actual workflow if you add it):
 
-    ALLOWED_EXTS — extensions to include
-    ALLOWED_NAMES — explicit filenames to include
-    EXCLUDE_DIRS — top-level directories to skip
-    MAX_FILE_SIZE — maximum file size in bytes to include
-    TREE_DEPTH — depth of the tree excerpt
+    CI badge placeholder (add a workflow and replace workflow-name):
 
-Recommended workflow / CI
 
-    Add the script to your repo, run it in CI to produce an artifact, or run locally to create a compact code snapshot for review/sharing.
-    Use --dry-run in CI checks to ensure the intended files are selected.
-    If you need an automatic snapshot on tag or release, add a GitHub Actions job that runs the script and uploads the markdown/zip as artifacts.
+    https://github.com/<your-org>/<your-repo>/actions/workflows/<workflow-file>.yaml/badge.svg
+
+
 
 Contributing
 
 Contributions welcome. Suggestions:
 
     Add more CLI options (output formats: tar.gz, commit to branch).
-    Add filtering by gitignore or by git tracked files only.
+    Add filtering by .gitignore or by git tracked files only.
     Add unit tests (pytest) for gather and tree functionality.
     Windows path handling improvements and encoding tests.
 
@@ -101,3 +113,5 @@ Please open issues or PRs.
 License
 
 This project is licensed under the MIT License — see the accompanying LICENSE file for details.
+
+If this helped, star the repo ⭐
