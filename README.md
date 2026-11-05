@@ -9,7 +9,8 @@ a Markdown file containing a small directory tree excerpt and concatenated sourc
 files (code-only). Optionally the script can also produce a ZIP archive including
 the generated Markdown and the selected source files.
 
-Quick links
+Quick links:
+
 - Script: `sourcecode_snapshot.py`
 - Snapshot output (default): `your_sourcecode_snapshot.md`
 - ZIP option: `--zip` / `-z`
@@ -39,23 +40,25 @@ Default excluded directories:
 
 No installation required. Copy `sourcecode_snapshot.py` to your project root or clone this repository:
 
-```bash
-git clone https://github.com/Betakontext/SourcecodeSnapshot.git
-cd SourcecodeSnapshot
+BASH
+
+    git clone https://github.com/Betakontext/SourcecodeSnapshot.git
+    cd SourcecodeSnapshot
 
 (Optional) Make executable:
-BASH
-Kopieren
 
-chmod +x sourcecode_snapshot.py
+BASH
+
+
+    chmod +x sourcecode_snapshot.py
 
 Usage
 
 Place sourcecode_snapshot.py in the project root (or install it to your PATH) and run:
-BASH
-Kopieren
 
-python3 sourcecode_snapshot.py
+BASH
+
+    python3 sourcecode_snapshot.py
 
 Common options:
 
@@ -69,48 +72,53 @@ Common options:
     --allow-name: Add an allowed filename (e.g. --allow-name README.md), can be used multiple times.
 
 Example:
-BASH
-Kopieren
 
-# default run
-python3 sourcecode_snapshot.py
+BASH
+
+    # default run
+    python3 sourcecode_snapshot.py
 
 # custom output and zip
-python3 sourcecode_snapshot.py --out project_snapshot.md --zip project_snapshot.zip
+
+BASH
+
+    python3 sourcecode_snapshot.py --out project_snapshot.md --zip project_snapshot.zip
 
 # dry-run to check without writing
-python3 sourcecode_snapshot.py --dry-run --verbose
+
+BASH
+
+    python3 sourcecode_snapshot.py --dry-run --verbose
 
 Output
 
-    your_sourcecode_snapshot.md (or your chosen --out) — a Markdown file that begins with
-    a small directory tree excerpt and continues with the contents of each included source file,
-    each within a fenced code block.
+your_sourcecode_snapshot.md (or your chosen --out) — a Markdown file that begins with
+a small directory tree excerpt and continues with the contents of each included source file,
+each within a fenced code block.
 
-    If --zip is provided, a ZIP archive is created that contains the Markdown file and the included source files preserving relative paths.
+If --zip is provided, a ZIP archive is created that contains the Markdown file and the included source files preserving relative paths.
 
 CI integration (optional)
 
 You can run the script in CI to produce artifacts or commit snapshots to a branch. Example GitHub Actions badge (replace with actual workflow if you add it):
 
-    CI badge placeholder (add a workflow and replace workflow-name):
+CI badge placeholder (add a workflow and replace workflow-name):
 
 
-    https://github.com/<your-org>/<your-repo>/actions/workflows/<workflow-file>.yaml/badge.svg
+https://github.com/<your-org>/<your-repo>/actions/workflows/<workflow-file>.yaml/badge.svg
 
 
 
-Contributing
+## Contributing
 
-Contributions welcome. Suggestions:
+Contributions welcome.
+Suggestions:
 
-    Add more CLI options (output formats: tar.gz, commit to branch).
-    Add filtering by .gitignore or by git tracked files only.
-    Add unit tests (pytest) for gather and tree functionality.
-    Windows path handling improvements and encoding tests.
+Add more CLI options (output formats: tar.gz, commit to branch). Add filtering by .gitignore or by git tracked files only.
+Add unit tests (pytest) for gather and tree functionality.
+Windows path handling improvements and encoding tests.
 
-Please open issues or PRs.
-License
+Fork and please open issues or PRs.
 
 This project is licensed under the MIT License — see the accompanying LICENSE file for details.
 
