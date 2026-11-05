@@ -1,6 +1,6 @@
 # SourcecodeSnapshot
 
-![Python](https://img.shields.io/badge/python-3.8%2B-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Latest Release](https://img.shields.io/github/v/release/Betakontext/SourcecodeSnapshot?label=latest%20release)
+![Python](https://img.shields.io/badge/python-3.8%2B-blue) ![License](https://img.shields.io/badge/license-MIT-green)
 
 Lightweight utility to produce a code-only Markdown snapshot of a repository.
 
