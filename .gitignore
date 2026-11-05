@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pytest_cache/
+htmlcov/
+
+# Virtualenvs
+.venv/
+venv/
+env/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# Build / distribution
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Logs / temp
+*.log
+*.tmp
+*.bak
+
+# Large or generated artifacts (project-specific)
+models/
+outputs/
+recordings/
+node_modules/
+
+# Environment / secrets (avoid committing real .env)
+.env
+.env.local
+.env.*.local
+
+# Snapshots / archives created by the tool (optional)
+your_sourcecode_snapshot.md
+*.zip
+
+# CI caches
+.cache/
+.mypy_cache/
+
+# Other
+*.sqlite
